@@ -4,8 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div id="heading">
+        Password Generator
+    </div>
+    <div id="display-password">
+        <input type="text">
+    </div>
+    <div id="password-properties">
+        <div id="char-length">
+            <p>
+                Character Length
+            </p>
+            <p id="len">
+                0
+            </p>
+            <div id="slider">
+                1234567890
+            </div>
+        </div>
+
+        <ul id="checkboxes" >
+            <li><input type="checkbox" name="" id="upper"></li>
+            <li><input type="checkbox" name="" id="lower"></li>
+            <li><input type="checkbox" name="" id="number"></li>
+            <li><input type="checkbox" name="" id="symbol"></li>
+        </ul>
+
+        <div id="strength">
+            <p>Strength</p>
+            <div id="strength-boxes">
+                <div id="one">1</div>
+                <div id="two">2</div>
+                <div id="three">3</div>
+                <div id="four">4</div>
+            </div>
+        </div>
+
+        <button>Generate -></button>
+    </div>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
