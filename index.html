@@ -3,54 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Generator App</title>
+    <title>Password Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-
-        <div id="heading">
-            Password Generator
+    <h1>Password Generator</h1>
+    <div class="container">
+        <div class="password-box">
+            <input type="text" name="password-display" id="password-display" class="password-display" placeholder="P4$5W0rD!" disabled>
+            <span id="copy"><img src="vector.svg" alt="copy"></span>
         </div>
-        <div id="display-password">
-            <input id="password" type="text" placeholder="P4$5WOrD!">
-            <span><img src="" alt="copy"></span>
-        </div>
-        <div id="password-properties">
-            <div id="char-length">
-                <p>
-                    Character Length
-                </p>
-                <p id="len">
-                </p>
-                <div id="slider">
-                    <input type="range" min="0" max="10" value="8" name="password_length" id="password_length">
-                    <span id="selected_value">8</span>
+        
+        <div class="password-properties">
+            <div class="input-length">
+                <p>Character Length<span id="length-number">5</span></p>
+                <div>
+                    <input type="range" name="length" id="length" min="0" max="10" value="4">
                 </div>
             </div>
-    
-            <ul id="checkboxes" >
-                <li><input type="checkbox" name="upper" id="upper">Include Uppercase Letters</li>
-                <li><input type="checkbox" name="lower" id="lower">Include Lowercase Letters</li>
-                <li><input type="checkbox" name="number" id="number">Include Numbers</li>
-                <li><input type="checkbox" name="symbol" id="symbol">Include Symbols</li>
-            </ul>
-    
-            <div id="strength">
-                <p>Strength</p>
-                <div id="strength-boxes">
-                    <div id="one">1</div>
-                    <div id="two">2</div>
-                    <div id="three">3</div>
-                    <div id="four">4</div>
-                </div>
+
+            <div class="row">
+                <input type="checkbox" name="uppercase" id="uppercase" checked>
+                <label for="uppercase">Include Uppercase Letters</label>
             </div>
-    
-            <button id="generate">Generate -></button>
+            <div class="row">
+                <input type="checkbox" name="lowercase" id="lowercase" checked>
+                <label for="lowercase">Include Lowercase Letters</label>
+            </div>
+            <div class="row">
+                <input type="checkbox" name="numbers" id="numbers" checked>
+                <label for="numbers">Include Numbers</label>
+            </div>
+            <div class="row">
+                <input type="checkbox" name="symbols" id="symbols" checked>
+                <label for="symbols">Include Symbols</label>
+            </div>
+            
+            <div class="strength">
+                <div id="strength">STRENGTH</div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+            </div>
+
+            <button type="button" id="generate">GENERATE -></button>
+
         </div>
-    </main>
-
-
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
